@@ -1,17 +1,17 @@
 import React from "react";
 import "./ToDoList.css";
+import CancelTwoToneIcon from '@mui/icons-material/CancelTwoTone';
 
 const ToDoList = (props) =>{
     return (
         <>
             <li>{props.item} 
-            <span 
+            <CancelTwoToneIcon
                 class="close" 
                 onClick={()=>{
                     props.onSelect(props.id)
                 }}
-            >&times;</span>
-            
+            />            
             </li>
         </>
     )
