@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import './App.css';
 import ToDoList from './ToDoList';
+import ListAltTwoToneIcon from '@mui/icons-material/ListAltTwoTone';
 
 const App = () =>{
 
@@ -33,14 +34,14 @@ const App = () =>{
     <>
       <div className='todoList'>
         <div className='header' id='myDIV'>
-          <h1>To-Do List</h1>
+          <h1><ListAltTwoToneIcon/> To-Do List</h1>
           <input 
             type = 'text'
             placeholder='Enter item name'
             id='myInput'
             value={InputList}
             onChange={ItemEvent}
-          ></input>        
+          ></input>
           <input type='button' className='addBtn' value='➕ Add Item' onClick={listOfItems}/>
         </div>
         <ul id='myUL'>
