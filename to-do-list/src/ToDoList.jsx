@@ -7,7 +7,7 @@ const ToDoList = (props) =>{
         <>
             <li>{props.item} 
             <CancelTwoToneIcon
-                class="close" 
+                className="close" 
                 onClick={()=>{
                     props.onSelect(props.id)
                 }}

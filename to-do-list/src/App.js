@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.css';
 import ToDoList from './ToDoList';
 import ListAltTwoToneIcon from '@mui/icons-material/ListAltTwoTone';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 const App = () =>{
 
@@ -15,6 +16,11 @@ const App = () =>{
   };
 
   const listOfItems = () =>{
+    console.log(InputList);
+    if (InputList === ""){
+      alert("Empty Input!");
+      return null;
+    }
     setItems((oldItems) =>{
       return [...oldItems, InputList];
     })
@@ -32,6 +38,7 @@ const App = () =>{
 
   return(
     <>
+    
       <div className='todoList'>
         <div className='header' id='myDIV'>
           <h1><ListAltTwoToneIcon/> To-Do List</h1>
